@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+/* @import "tailwindcss/preflight";   
+@import "tailwindcss/utilities";    */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+  --font-orbitron: 'Orbitron', sans-serif;
+  --color-primary:     #0d1b2a;  /* Deep Navy Blue */
+  --color-secondary:   #1b263b;  /* Muted Blue/Gray */
+  --color-accent:      #415a77;  /* Steel Blue */
+  --color-background:  #778da9;  /* Dusty Blue */
+  --color-text:        #e0e1dd;  /* Soft Off-White */
+}
+
+/* index.css or tailwind.css */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden auto;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: auto;
+  overflow-x:hidden;
+}
