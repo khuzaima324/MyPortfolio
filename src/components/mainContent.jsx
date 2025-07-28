@@ -46,13 +46,13 @@ function mainContent() {
 
   return (
     <>
-      <section className='content-wrapper flex justify-between items-center w-[80%] h-screen mx-auto'>
+      <section className='content-wrapper flex justify-between md:items-center w-[80%] max-h-screen h-[50vh] md:h-screen mx-auto overflow-hidden'>
         <div className="left-content w-full md:w-1/2 z-50">
           <motion.div
             className="left-content w-full"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 5 }}
+            transition={{ duration: 3 }}
           >
             <h1 className='tittle text-5xl font-bold mb-1.5'>Khuzaima Iqbal</h1>
             <h2 className='text-2xl'>

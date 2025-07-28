@@ -15,6 +15,7 @@ import Home from './pages/home.jsx'
 import About from './pages/aboutMe.jsx'
 import Contact from './pages/contactMe.jsx'
 import Projects from './pages/projects.jsx'
+import Video from './pages/video.jsx'
 
 // React Router
 const router = createBrowserRouter(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
         <Route path="aboutMe" element={<About/>}/>
         <Route path="contactMe" element={<Contact/>}/>
         <Route path="projects" element={<Projects/>}/>
+        <Route path="video" element={<Video/>}/>
     </Route>
   )
 )

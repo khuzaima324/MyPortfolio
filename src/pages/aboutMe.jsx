@@ -8,7 +8,7 @@ const pages = [
     title: "Hi, I'm Khuzaima",
     description: "A passionate web developer & video editor",
     content: "I create digital experiences that blend technical expertise with creative vision.",
-    image: 'https://media.licdn.com/dms/image/v2/D4D03AQHpG4-thfHWfg/profile-displayphoto-crop_800_800/B4DZfPIla7GUAI-/0/1751526824279?e=1756339200&v=beta&t=RzC-2U88HZ-ZwBVQH1yCl_XyjHGdRfZzlNQLX4WrAk0'
+    image: 'src/assets/images/portrait.png'
   },
   {
     id: 2,
@@ -192,7 +192,7 @@ export default function About() {
   }, [currentPage, iconSetRef.current]);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-[var(--color-primary)]">
+    <div className="relative w-full h-screen overflow-hidden bg-[var(--color-primary)]" style={{ fontFamily: 'var(--font-orbitron)'}}>
       <div
         className={`absolute inset-0 bg-gradient-to-br ${
           pages[currentPage]?.bgColor || "from-[var(--color-primary)] to-[var(--color-secondary)]"
@@ -313,7 +313,7 @@ export default function About() {
                         <img
                           src={icon.src}
                           alt={icon.alt}
-                          className="w-24 h-24 md:w-28 md:h-28 object-contain rounded-lg border border-[var(--color-accent)]"
+                          className="w-15 h-15 md:w-28 md:h-28 object-contain  rounded-lg border border-[var(--color-accent)]"
                           style={{ filter: "grayscale(100%)" }}
                           onError={(e) => {
                             console.error(`Failed to load icon: ${icon.src}`);
@@ -373,7 +373,7 @@ export default function About() {
                   <motion.img
                     src={pages[currentPage].image}
                     alt="Khuzaima's profile picture"
-                    className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-[var(--color-accent)] shadow-lg object-cover"
+                    className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-[var(--color-accent)] shadow-lg object-cover object-top"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.3, duration: 0.7, ease: "easeInOut" }}

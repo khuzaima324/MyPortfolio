@@ -6,6 +6,7 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import Lenis from '@studio-freight/lenis';
 import { Code2, FileCode, Braces, TerminalSquare, Bug, Database, Cloud, Cpu, Code } from 'lucide-react' // Optional Lucide icons
 import SplineModel from '../components/splineModel';
+import WelcomeModal from '../components/welcomeMessage';
 
 const shapes = [
   '<div>', '</div>', '<html>', '<body>', '<section>', '</section>', '<React/>', '<JSX>', '</>', '<p>', '</a>', '<button>', '<form>',
@@ -87,7 +88,9 @@ function HomePage() {
       {/* spline roboot */}
    
         <SplineModel sectionRef={scrollRef} endRef={endRef} />
-
+      {/* Welcome Model */}
+      <WelcomeModal/>
+      
       {/* both home page sections */}
       <div className="sectionWrapper" ref={scrollRef}>
         {/* Main content */}

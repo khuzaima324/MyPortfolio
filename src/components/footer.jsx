@@ -12,7 +12,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-[var(--color-secondary)] text-[var(--color-text)] border-t border-[var(--color-primary)] py-8 px-4 sm:px-10 z-10">
+    <footer className="bg-[var(--color-secondary)] text-[var(--color-text)] border-t border-[var(--color-primary)] py-8 px-4 sm:px-10 z-10 overflow-hidden">
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 items-center text-center sm:text-left">
 
         {/* Branding */}
@@ -43,9 +43,12 @@ function Footer() {
         </div>
 
         {/* Social Links */}
-        <div >
+        <div className='w-full flex md:flex-wrap'>
           <h3 className="font-semibold text-base mb-3 text-start w-100">Follow Me</h3>
           <div className="flex gap-4 sm:items-start space-y-1 text-sm">
+            <a href="https://instagram.com/khuzaima2020" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-background)] transition scale-140">
+              <FaInstagram />
+            </a>
             <a href="https://github.com/khuzaima324" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-background)] transition scale-140">
               <FaGithub />
             </a>
@@ -54,9 +57,6 @@ function Footer() {
             </a>
             <a href="https://linkedin.com/in/khuzaima-iqbal" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-background)] transition scale-140">
               <FaLinkedin />
-            </a>
-            <a href="https://instagram.com/khuzaima2020" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-background)] transition scale-140">
-              <FaInstagram />
             </a>
           </div>
         </div>

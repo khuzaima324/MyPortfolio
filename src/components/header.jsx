@@ -11,7 +11,7 @@ function header() {
     { name: 'About', path: '/aboutMe' },
     { name: 'Projects', path: '/projects' },
     { name: 'Contact', path: '/contactMe' },
-    { name: 'Videos', path: '/videos' },
+    { name: 'Video', path: '/video' },
   ];
 
   return (

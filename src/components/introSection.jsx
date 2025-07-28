@@ -43,12 +43,13 @@ function IntroSection() {
 
       <motion.div
         // style={{ y: circleY }}
-        className="h-200 w-200 rounded-full bg-zinc-900 flex items-center justify-center relative z-10"
+        className="h-200 w-200 rounded-full bg-zinc-900 flex items-center justify-center relative z-10 overflow-hidden"
         style={{
           y: circleY,
           boxShadow: "0px 0px 100px var(--color-accent)"
         }}
       >
+        <p className='md:hidden inline-block text-center'>I'm A Web Developer & Video Editor <br /> Head Over To About Me To Learn More</p>
         {skills.map((skill, i) => (
           <motion.div
             key={i}
