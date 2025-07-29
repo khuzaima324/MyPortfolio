@@ -7,7 +7,7 @@ import { StrictMode } from 'react'
 import { createRoot }from 'react-dom/client'
 import './index.css'
 import ReactDom from 'react-dom/client'
-import {createBrowserRouter, RouterProvider, createRoutesFromElements, Route, HashRouter as Router } from 'react-router-dom'
+import {createBrowserRouter, RouterProvider, HashRouter, createRoutesFromElements, Route, HashRouter as Router} from 'react-router-dom'
   
 // Components
 import App from './App.jsx'
@@ -32,6 +32,6 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+      <RouterProvider router={router}/>
   </StrictMode>,
 )
