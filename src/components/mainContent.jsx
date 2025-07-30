@@ -71,7 +71,7 @@ function mainContent() {
               ></span>
             </NavLink>
             <a
-              href="src\assets\KhuzaimaCv.pdf" // Update with actual CV path or URL
+              href="./KhuzaimaCv.pdf" 
               download="Khuzaima_CV.pdf"
               className="block text-[var(--color-text)] w-fit font-semibold py-1 px-3 rounded-lg border border-[var(--color-text)]/30 shadow-lg z-60 pointer-events-auto text-sm mt-2"
               whileHover={{ scale: 1.05, backgroundColor: "var(--color-text)", color: "var(--color-primary)" }}

@@ -124,6 +124,7 @@ export default function About() {
   useEffect(() => {
     let scrollTimeout;
     let lastScroll = 0;
+    let touchStartY = 0;
 
     const handleScroll = (e) => {
       e.preventDefault();
@@ -138,6 +139,26 @@ export default function About() {
       scrollTimeout = setTimeout(() => setScrolling(false), 500);
 
       const direction = e.deltaY > 0 ? "down" : "up";
+      handlePageChange(direction);
+    };
+
+    const handleTouchStart = (e) => {
+      touchStartY = e.touches[0].clientY;
+    };
+
+    const handleTouchMove = (e) => {
+      if (!lockScroll) return;
+      const touchEndY = e.touches[0].clientY;
+      const diff = touchStartY - touchEndY;
+
+      if (Math.abs(diff) > 50) { // threshold for swipe
+        const direction = diff > 0 ? "down" : "up";
+        handlePageChange(direction);
+        touchStartY = touchEndY;
+      }
+    };
+
+    const handlePageChange = (direction) => {
       setCurrentPage((prev) => {
         if (direction === "down" && prev < pages.length - 1) {
           return prev + 1;
@@ -152,12 +173,17 @@ export default function About() {
     };
 
     window.addEventListener("wheel", handleScroll, { passive: false });
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchmove", handleTouchMove, { passive: false });
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
       clearTimeout(scrollTimeout);
     };
   }, [lockScroll]);
+
 
   useEffect(() => {
     const handleScrollUp = (e) => {
@@ -192,11 +218,10 @@ export default function About() {
   }, [currentPage, iconSetRef.current]);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-[var(--color-primary)]" style={{ fontFamily: 'var(--font-orbitron)'}}>
+    <div className="relative w-full h-screen overflow-hidden bg-[var(--color-primary)]" style={{ fontFamily: 'var(--font-orbitron)' }}>
       <div
-        className={`absolute inset-0 bg-gradient-to-br ${
-          pages[currentPage]?.bgColor || "from-[var(--color-primary)] to-[var(--color-secondary)]"
-        } transition-all duration-1000`}
+        className={`absolute inset-0 bg-gradient-to-br ${pages[currentPage]?.bgColor || "from-[var(--color-primary)] to-[var(--color-secondary)]"
+          } transition-all duration-1000`}
       />
 
       <div className="absolute inset-0 overflow-hidden">
@@ -354,7 +379,7 @@ export default function About() {
                   {pages[currentPage].content}
                 </motion.p>
                 <motion.a
-                  href="src\assets\KhuzaimaCv.pdf" // Update with actual CV path or URL
+                  href="./KhuzaimaCv.pdf"
                   download="Khuzaima_CV.pdf"
                   className="inline-block bg-[var(--color-accent)] text-[var(--color-text)] font-semibold py-3 px-6 rounded-lg border border-[var(--color-text)]/30 shadow-lg"
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -413,7 +438,7 @@ export default function About() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
         {pages.map((_, i) => (
           <button
             key={`indicator-${i}`}
@@ -429,7 +454,7 @@ export default function About() {
             aria-label={`Go to page ${i + 1}`}
           />
         ))}
-      </div>
+      </div> */}
 
       {!scrolling && (
         <motion.div
