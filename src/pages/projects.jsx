@@ -9,7 +9,7 @@ const projects = [
     description: "My futuristic and smooth-scrolling portfolio website built with React and Framer Motion.",
     image: "./images/portfolio.JPG",
     tech: ["React", "React Router", "Framer Motion", "TailwindCSS", "API", "Vite"],
-    demo: "https://khuzaimaportfolio.netlify.app",
+    demo: "https://khuzaimaiqbalportfolio.netlify.app",
     code: "https://github.com/khuzaima324/myPortfolio.git",
   },
   {
