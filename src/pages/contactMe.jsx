@@ -51,12 +51,14 @@ export default function Contact() {
           Contact <span className="text-[var(--color-background)]">Me</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-10 overflow-hidden">
           {/* Left - Contact Info */}
           <div className="flex flex-col justify-center space-y-6">
-            <motion.a whileHover={{ scale: 1.05 }} className="flex items-center space-x-4 text-lg">
+            <motion.a 
+            whileHover={{ scale: 1.05 }} 
+            className="flex items-center space-x-4 text-lg">
               <FaEnvelope className="text-blue-400 text-2xl" />
-              <span>khuzaimaiqbal01278@gmail.com</span>
+              <span className="break-all text-center sm:text-left">khuzaimaiqbal01278@gmail.com</span>
             </motion.a>
 
             <motion.a
@@ -95,7 +97,7 @@ export default function Contact() {
               placeholder="Your Name"
               value={form.name}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-transparent border border-blue-500 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              className="w-full max-w-full px-4 py-3 bg-transparent border border-blue-500 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
               required
             />
             <input
@@ -120,7 +122,7 @@ export default function Contact() {
               whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px #3b82f6" }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 py-3 rounded-xl text-lg font-semibold shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] transition"
+              className="w-[100%] bg-gradient-to-r from-blue-600 to-purple-600 py-3 rounded-xl text-lg font-semibold shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] transition"
             >
               Send Message
             </motion.button>
