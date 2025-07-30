@@ -8,7 +8,7 @@ const pages = [
     title: "Hi, I'm Khuzaima",
     description: "A passionate web developer & video editor",
     content: "I create digital experiences that blend technical expertise with creative vision.",
-    image: 'public/images/portrait.png'
+    image: './images/portrait.png'
   },
   {
     id: 2,
