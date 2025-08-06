@@ -43,13 +43,19 @@ function IntroSection() {
 
       <motion.div
         // style={{ y: circleY }}
-        className="h-200 w-200 rounded-full bg-zinc-900 flex items-center justify-center relative z-10 overflow-hidden"
+        className="h-200 w-200 rounded-full bg-zinc-900 flex items-center justify-center relative z-10"
         style={{
           y: circleY,
           boxShadow: "0px 0px 100px var(--color-accent)"
         }}
       >
-        <p className='md:hidden inline-block text-center'>I'm A Web Developer & Video Editor <br /> Head Over To About Me To Learn More</p>
+        <div className='p-10 pt-0'>
+          <p className='mb-2 text-sm'>🚀 Building responsive single-page web applications with modern front-end technologies including React.js, Next.js, Redux.js, TailwindCSS, HTML5, CSS3, and Bootstrap</p>
+          <p className='mb-2 text-sm'>🛠️ Designing secure and high-performance backends using Node.js and Express.js</p>
+          <p className='mb-2 text-sm'>🔗 Developing and integrating APIs while following modern programming best practices for seamless application communication</p>
+          <p className='mb-2 text-sm'>🎬 Crafting engaging and visually appealing video content with professional editing techniques to deliver impactful storytelling and high-quality productions</p>
+        </div>
+        {/* <p className=' inline-block text-center'>I'm A Web Developer & Video Editor <br /> Head Over To About Me To Learn More</p> */}
         {skills.map((skill, i) => (
           <motion.div
             key={i}

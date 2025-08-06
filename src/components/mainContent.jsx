@@ -4,7 +4,7 @@ import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
 import { Scale, ChevronDown } from 'lucide-react';
 import { useNavigate, NavLink } from 'react-router-dom';
-// import SplineModel from './splineModel';
+import SplineModel from './splineModel';
 
 function mainContent() {
   // scroll Indicator at bottom
@@ -46,7 +46,7 @@ function mainContent() {
 
   return (
     <>
-      <section className='content-wrapper flex justify-between md:items-center w-[80%] max-h-screen h-[50vh] md:h-screen mx-auto overflow-hidden'>
+      <section className='content-wrapper flex justify-between md:items-center w-[80%] h-screen md:h-screen md:flex-nowrap flex-wrap-reverse mx-auto'>
         <div className="left-content w-full md:w-1/2 z-50">
           <motion.div
             className="left-content w-full"
@@ -81,9 +81,9 @@ function mainContent() {
             </a>
           </motion.div>
         </div>
-        {/* <div className="right-content w-lg-[50%] flex justify-center items-center max-w-[50%]">
+        <div className="right-content w-lg-[50%] flex justify-center items-center w-[100%]">
           <SplineModel />
-        </div> */}
+        </div>
 
       </section>
       {/* scrool down indicator */}

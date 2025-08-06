@@ -16,8 +16,8 @@ export default function Contact() {
 
     const payload = {
       content: `📩 **New Portfolio Message**  
-      👤 Name: ${form.name}  
-      📧 Email: ${form.email}  
+      👤 Name: ${form.name}
+      📧 Email: ${form.email}
       💬 Message: ${form.message}`,
     };
 
@@ -51,7 +51,7 @@ export default function Contact() {
           Contact <span className="text-[var(--color-background)]">Me</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10 overflow-hidden">
+        <div className="grid md:grid-cols-2 gap-10">
           {/* Left - Contact Info */}
           <div className="flex flex-col justify-center space-y-6">
             <motion.a 

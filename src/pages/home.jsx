@@ -5,7 +5,6 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 // import Lenis from 'lenis'
 import Lenis from '@studio-freight/lenis';
 import { Code2, FileCode, Braces, TerminalSquare, Bug, Database, Cloud, Cpu, Code } from 'lucide-react' // Optional Lucide icons
-import SplineModel from '../components/splineModel';
 import WelcomeModal from '../components/welcomeMessage';
 
 const shapes = [
@@ -27,15 +26,11 @@ function HomePage() {
         x: e.clientX,
         y: e.clientY,
       })
-      // cursorRef.current = { x: e.clientX, y: e.clientY };
     }
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
-  // const offset = (factor) => ({
-  //   tranform: `translate(${(cursorRef.current.x - window.innerWidth / 2) * factor}px, ${(cursorRef.current.x - window.innerHeight / 2) * factor}px )`
-  // })
 
   const backgroundItems = []
   for (let i = 0; i < 8; i++) {
@@ -70,10 +65,6 @@ function HomePage() {
       )
     }
   }
-  // useref for scrolling
-  const scrollRef = useRef();
-  const endRef = useRef(null); // this marks the end of Home section
-
 
   return (
     <div
@@ -85,19 +76,14 @@ function HomePage() {
         {backgroundItems}
       </div>
 
-      {/* spline roboot */}
-   
-        <SplineModel sectionRef={scrollRef} endRef={endRef} />
-      {/* Welcome Model */}
       <WelcomeModal/>
       
       {/* both home page sections */}
-      <div className="sectionWrapper" ref={scrollRef}>
+      <div className="sectionWrapper">
         {/* Main content */}
         <MainContent />
         {/* Intro Section / Section 2 */}
         <IntroSection/>
-      <div ref={endRef} />
       </div>
 
     </div>
