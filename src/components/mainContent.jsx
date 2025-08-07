@@ -54,17 +54,17 @@ function mainContent() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 2}}
           >
-            <h1 className='tittle text-5xl font-bold mb-1.5'>Khuzaima Iqbal</h1>
-            <h2 className='text-2xl'>
+            <h1 className='tittle md:text-5xl text-3xl font-bold mb-1.5'>Khuzaima Iqbal</h1>
+            <h2 className='md:text-2xl'>
               <span className='Im text-gray-500 text-sm'>I'm a </span>
               {text}
               <span className="blinking-cursor"> |</span>
             </h2>
             <NavLink
               to="/contactMe"
-              className="relative inline-block px-6 py-2 mt-4 rounded-2xl border border-white text-white overflow-hidden transition-colors duration-300"
+              className="relative inline-block px-4 md:px-6 py-1 md:py-2 mt-4 rounded-2xl border border-white text-white overflow-hidden transition-colors duration-300"
             >
-              <span className="relative z-10">Hire Me</span>
+              <span className="relative z-10 text-sm md:text-1xl">Hire Me</span>
               <span
                 className="absolute inset-0 animate-pulse bg-white opacity-10 blur-xl"
                 aria-hidden="true"
@@ -81,7 +81,7 @@ function mainContent() {
             </a>
           </motion.div>
         </div>
-        <div className="right-content w-lg-[50%] flex justify-center items-center w-[100%] h-[60%] md:h-screen">
+        <div className="right-content w-lg-[50%] flex justify-center items-center w-[100%] h-[50%] md:h-screen">
           <SplineModel />
         </div>
 

@@ -28,6 +28,8 @@ function WelcomeModal() {
           There are still alot of errors and bugs you could find in this portfolio
           <br />
           Any Suggestion About This Portfolio will be really appriciated
+          <br />
+          Use Desktop Or Laptop For Better Experience
         </p>
         <button
           onClick={() => setShowModal(false)}

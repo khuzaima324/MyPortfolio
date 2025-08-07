@@ -34,12 +34,12 @@ function IntroSection() {
         transition={{duration:1}}
         viewport={true}
       >
-        <div className='p-10 pt-0 text-center'>
+        <div className='p-5 text-center'>
           <h2 className='mb-5 text-center text-3xl'>What I Do?</h2>
-          <p className='mb-2 text-sm px-1.5'>🚀 <br /> Building responsive single-page web applications with modern front-end technologies including React.js, Next.js, Redux.js, TailwindCSS, HTML5, CSS3, and Bootstrap</p>
-          <p className='mb-2 text-sm'>🛠️ <br /> Designing secure and high-performance backends using Node.js and Express.js</p>
-          <p className='mb-2 text-sm'>🔗 <br /> Developing and integrating APIs while following modern programming best practices for seamless application communication</p>
-          <p className='mb-2 text-sm px-1.5'>🎬 <br /> Crafting engaging and visually appealing video content with professional editing techniques to deliver impactful storytelling and high-quality productions</p>
+          <p className='mb-2 text-sm px-0.5 md:px-1.5'>🚀 <br /> Building responsive single-page web applications with modern front-end technologies including React.js, Next.js, Redux.js, TailwindCSS, HTML5, CSS3, and Bootstrap</p>
+          <p className='mb-2 text-sm px-0.5 md:px-1.5'>🛠️ <br /> Designing secure and high-performance backends using Node.js and Express.js</p>
+          <p className='mb-2 text-sm px-0.5 md:px-1.5'>🔗 <br /> Developing and integrating APIs while following modern programming best practices for seamless application communication</p>
+          <p className='mb-2 text-sm px-0.5 md:px-1.5'>🎬 <br /> Crafting engaging and visually appealing video content with professional editing techniques to deliver impactful storytelling and high-quality productions</p>
         </div>
         {/* <p className=' inline-block text-center'>I'm A Web Developer & Video Editor <br /> Head Over To About Me To Learn More</p> */}
         {skills.map((skill, i) => (
