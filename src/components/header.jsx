@@ -15,7 +15,7 @@ function header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-transparent" style={{ fontFamily: 'var(--font-orbitron)', color: 'var(--color-text)' }}>
+    <header className="fixed top-0 left-0 w-full backdrop-blur-sm bg-transparent z-50" style={{ fontFamily: 'var(--font-orbitron)', color: 'var(--color-text)' }}>
       <div className="max-w-7xl mx-auto px-6 py-4 flex sm:justify-center justify-end items-center ">
 
         {/* Desktop Navigation */}
@@ -41,7 +41,7 @@ function header() {
           </nav>
         </motion.div>
         {/* Hamburger Icon for Mobile */}
-        <div className="sm:hidden">
+        <div className="sm:hidden z-50">
           {open ? (
             <X onClick={() => setOpen(false)} className="w-6 h-6 cursor-pointer" />
           ) : (
@@ -52,7 +52,12 @@ function header() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="sm:hidden flex flex-col bg-black/90 text-white p-6 space-y-4">
+        <motion.div 
+          className="sm:hidden flex flex-col bg-black/90 text-white p-6 space-y-4 h-screen"
+          initial={{x:-100, opacity:0.5}}
+          animate={{x:0, opacity:1}}
+          transition={{duration:1}}
+        >
           {navItems.map((item) => (
             <NavLink
               key={item.name}
@@ -66,7 +71,7 @@ function header() {
               {item.name}
             </NavLink>
           ))}
-        </div>
+        </motion.div>
       )}
     </header>
   );

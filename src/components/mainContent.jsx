@@ -46,13 +46,13 @@ function mainContent() {
 
   return (
     <>
-      <section className='content-wrapper flex justify-between md:items-center w-[80%] h-screen md:h-screen md:flex-nowrap flex-wrap-reverse mx-auto'>
-        <div className="left-content w-full md:w-1/2 z-50">
+      <section className='content-wrapper flex justify-between md:items-center w-[90%] md:w-[80%] h-screen md:flex-nowrap flex-wrap-reverse mx-auto'>
+        <div className="left-content w-full z-30 h-[40%] md:h-full flex justify-center items-center">
           <motion.div
             className="left-content w-full"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 3 }}
+            transition={{ duration: 2}}
           >
             <h1 className='tittle text-5xl font-bold mb-1.5'>Khuzaima Iqbal</h1>
             <h2 className='text-2xl'>
@@ -81,7 +81,7 @@ function mainContent() {
             </a>
           </motion.div>
         </div>
-        <div className="right-content w-lg-[50%] flex justify-center items-center w-[100%]">
+        <div className="right-content w-lg-[50%] flex justify-center items-center w-[100%] h-[60%] md:h-screen">
           <SplineModel />
         </div>
 

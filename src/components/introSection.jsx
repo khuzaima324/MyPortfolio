@@ -21,39 +21,25 @@ function IntroSection() {
     offset: ["start end", "center center"]
   })
 
-  // Animate circle from bottom (y: 200) to center (y: 0)
-  const circleY = useTransform(scrollYProgress, [0, 2], [100, 400])
-
-  // Animate heading from top (y: -100) to its position above the circle (y: 0)
-  const headingY = useTransform(scrollYProgress, [0, 2], [-30, 50])
-
   return (
     <section ref={targetRef} className="h-screen bg-black text-white flex items-center justify-center px-6 relative overflow-hidden">
-      <motion.h2
-        initial={{opacity: 0, scale: 0}}
-        whileInView={{opacity: 1, scale: 1}}
-        // viewport={{once: true}}
-        transition={{ duration: 2}}
-        className="absolute top-[10%] text-4xl font-bold z-20"
-        style={{ y: headingY}}
-
-      >
-        What I Do?
-      </motion.h2>
 
       <motion.div
-        // style={{ y: circleY }}
-        className="h-200 w-200 rounded-full bg-zinc-900 flex items-center justify-center relative z-10"
+        className="h-150 w-150 rounded-full bg-zinc-900 flex items-center justify-center relative z-10"
         style={{
-          y: circleY,
-          boxShadow: "0px 0px 100px var(--color-accent)"
+          boxShadow: "0px 0px 20px var(--color-accent)" 
         }}
+        initial={{scale:0, opacity:0}}
+        animate={{scale:1, opacity:1}}
+        transition={{duration:1}}
+        viewport={true}
       >
-        <div className='p-10 pt-0'>
-          <p className='mb-2 text-sm'>🚀 Building responsive single-page web applications with modern front-end technologies including React.js, Next.js, Redux.js, TailwindCSS, HTML5, CSS3, and Bootstrap</p>
-          <p className='mb-2 text-sm'>🛠️ Designing secure and high-performance backends using Node.js and Express.js</p>
-          <p className='mb-2 text-sm'>🔗 Developing and integrating APIs while following modern programming best practices for seamless application communication</p>
-          <p className='mb-2 text-sm'>🎬 Crafting engaging and visually appealing video content with professional editing techniques to deliver impactful storytelling and high-quality productions</p>
+        <div className='p-10 pt-0 text-center'>
+          <h2 className='mb-5 text-center text-3xl'>What I Do?</h2>
+          <p className='mb-2 text-sm px-1.5'>🚀 <br /> Building responsive single-page web applications with modern front-end technologies including React.js, Next.js, Redux.js, TailwindCSS, HTML5, CSS3, and Bootstrap</p>
+          <p className='mb-2 text-sm'>🛠️ <br /> Designing secure and high-performance backends using Node.js and Express.js</p>
+          <p className='mb-2 text-sm'>🔗 <br /> Developing and integrating APIs while following modern programming best practices for seamless application communication</p>
+          <p className='mb-2 text-sm px-1.5'>🎬 <br /> Crafting engaging and visually appealing video content with professional editing techniques to deliver impactful storytelling and high-quality productions</p>
         </div>
         {/* <p className=' inline-block text-center'>I'm A Web Developer & Video Editor <br /> Head Over To About Me To Learn More</p> */}
         {skills.map((skill, i) => (
